@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment1"
+    android:id="@+id/f1">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:text="Bracelets"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@id/tv1">
+
+                <ViewFlipper
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="0dp"
+                    android:autoStart="true"
+                    android:flipInterval="1000"
+                    android:inAnimation="@android:anim/slide_in_left"
+                    android:outAnimation="@android:anim/slide_out_right">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/t5" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/t1" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/t4" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/t3" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/t2" />
+
+
+                </ViewFlipper>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_below="@id/card"
+                android:layout_marginLeft="7dp"
+                />
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="800"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_below="@id/card"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="7dp"
+                />
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:layout_below="@id/tv3"
+                android:layout_marginLeft="7dp"
+                />
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="Captivating Elegance on Your Wrist.\nDiscover a world of enchanting bracelets for women that epitomize both grace and strength. From intricate designs that tell stories to sleek modern pieces, our collection offers the perfect wrist companions for every mood and occasion. Adorn yourself with these radiant bracelets and let your style shine with a touch of timeless beauty."
+                android:layout_marginRight="7dp"
+                android:layout_below="@id/tv4"
+                android:layout_marginLeft="7dp"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Add to WishList"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="8dp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/black"
+        android:drawableRight="@drawable/wishlist"
+
+        />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="7dp"
+        android:layout_alignParentBottom="true"
+        android:text="Add to Cart "
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/black"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:drawableRight="@drawable/baseline_shopping_cart_24"
+        />
+
+
+
+
+
+</RelativeLayout>
